@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gallery</title>
+	<link rel="stylesheet" href="./static/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<i class="fa-solid fa-bars" id="navbtn"></i>
+	<nav>
+		<a href="./index.html">Home</a>
+		<ul class="navlinks">
+			<li><a href="./index.html#about">About</a></li>
+			<li><a href="./pricing.html">Pricing</a></li>
+			<li><a href="./gallery.html">Gallery</a></li>
+			<li><a href="#">Sign In</a></li>
+		</ul>
+	</nav>
+
+	<section class="gallery-sec">
+		<p>Choose and download in mp4</p>
+		<div class="gallery-links">
+			<a href="#" class="cta">Sign Up / Log In</a>
+			<a href="#" class="cta">Pricing</a>
+		</div>
+
+		<div class="grid">
+
+			<div class="item">
+				<video class="item-video">
+					<source src="./static/gslike.mp4" type="video/mp4">
+				</video>
+				<ul>
+					<li>Item Title</li>
+					<li><a class="btn" href="./static/gslike.mp4" target="__blank">Download</a></li>
+				</ul>
+			</div>
+			<div class="item">
+				<video class="item-video">
+					<source src="./static/gslike.mp4" type="video/mp4">
+				</video>
+				<ul>
+					<li>Item Title</li>
+					<li><a class="btn" href="./static/gslike.mp4" target="__blank">Download</a></li>
+				</ul>
+			</div>
+			<div class="item">
+				<video class="item-video">
+					<source src="./static/gslike.mp4" type="video/mp4">
+				</video>
+				<ul>
+					<li>Item Title</li>
+					<li><a class="btn" href="./static/gslike.mp4" target="__blank">Download</a></li>
+				</ul>
+			</div>
+			<div class="item">
+				<video class="item-video">
+					<source src="./static/gslike.mp4" type="video/mp4">
+				</video>
+				<ul>
+					<li>Item Title</li>
+					<li><a class="btn" href="./static/gslike.mp4" target="__blank">Download</a></li>
+				</ul>
+			</div>
+			<div class="item">
+				<video class="item-video">
+					<source src="./static/gslike.mp4" type="video/mp4">
+				</video>
+				<ul>
+					<li>Item Title</li>
+					<li><a class="btn" href="./static/gslike.mp4" target="__blank">Download</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="footerlinks">
+			<a href="#">Home</a>
+			<a href="#">Pricing</a>
+			<a href="#">About</a>
+			<a href="#">Gallery</a>
+			<a href="#">Sign Up</a>
+			<a href="#">Log In</a>
+		</div>
+
+		<form action="" method="POST">
+			<span>Subscribe to Newsletter</span>
+			<input type="email" placeholder="E-Mail" required>
+			<button class="btn">Submit</button>
+		</form>
+	</footer>
+
+	<script>
+		function downloadVideo(event) {
+			event.preventDefault();
+			const videoUrl = event.currentTarget.getAttribute('href');
+			const videoFilename = videoUrl.split('/').pop();
+			const downloadLink = document.createElement('a');
+			downloadLink.setAttribute('href', videoUrl);
+			downloadLink.setAttribute('download', videoFilename);
+			document.body.appendChild(downloadLink);
+			downloadLink.click();
+			document.body.removeChild(downloadLink);
+		}
+	</script>
+	
+	<script type="text/javascript">
+		const navbtn = document.querySelector('#navbtn')
+		const navbar = document.querySelector('nav')
+		const outside = document.querySelector('section')
+
+		navbtn.addEventListener('click', function(){
+			navbar.style.width = '80%'
+		})
+		outside.addEventListener('click', function(){
+			navbar.style.width = '0'
+		})
+	</script>
+</body>
+</html>

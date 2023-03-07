@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pricing</title>
+	<link rel="stylesheet" href="./static/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<i class="fa-solid fa-bars" id="navbtn"></i>
+	<nav>
+		<a href="./index.html">Home</a>
+		<ul class="navlinks">
+			<li><a href="./index.html#about">About</a></li>
+			<li><a href="./pricing.html">Pricing</a></li>
+			<li><a href="./gallery.html">Gallery</a></li>
+			<li><a href="#">Sign In</a></li>
+		</ul>
+	</nav>
+
+	<section class="pricing-bg">
+
+		<div class="pricing">
+			<img src="./static/image.png" alt="stripe img">
+			<h1>$5.00</h1>
+			<a href="#" class="cta">Log In</a>
+			<ul>
+				<li>One time payment</li>
+				<li>Get access to any asset</li>
+			</ul>
+		</div>
+
+	</section>
+
+	<footer>
+		<div class="footerlinks">
+			<a href="#">Home</a>
+			<a href="#">Pricing</a>
+			<a href="#">About</a>
+			<a href="#">Gallery</a>
+			<a href="#">Sign Up</a>
+			<a href="#">Log In</a>
+		</div>
+
+		<form action="" method="POST">
+			<span>Subscribe to Newsletter</span>
+			<input type="email" placeholder="E-Mail" required>
+			<button class="btn">Submit</button>
+		</form>
+	</footer>
+	
+	<script type="text/javascript">
+		const navbtn = document.querySelector('#navbtn')
+		const navbar = document.querySelector('nav')
+		const outside = document.querySelector('section')
+
+		navbtn.addEventListener('click', function(){
+			navbar.style.width = '80%'
+		})
+		outside.addEventListener('click', function(){
+			navbar.style.width = '0'
+		})
+	</script>
+</body>
+</html>
