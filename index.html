@@ -19,31 +19,36 @@
 		</ul>
 	</nav>
 	
-	<section class="hero section">
-		<h1>Video Editing Assets</h1>
+	<main>
+		
 
-		<a href="./gallery.html" class="cta">Gallery</a>
-	</section>
-	
-	<section id="about" class="section">
-		<h4>Learn More <i class="fa-solid fa-arrow-down"></i></h4>
+		<section class="hero section">
+			<h1>Video Editing Assets</h1>
 
-		<div class="about">
-			<div class="about-content">
-				<h2>Pay Once - Free Download</h2>
-				<p>
-					Sign up with a new account and make a one time payment with your desired payment service.
-				</p>
-				<span id="cards">
-					<i class="fa-brands fa-cc-paypal"></i>
-					<i class="fa-brands fa-stripe"></i>
-				</span>
-				<a href="./pricing.html" class="cta">Pricing</a>
+			<a href="./gallery.html" class="cta">Gallery</a>
+		</section>
+		
+		<section id="about" class="section">
+			<h4>Learn More <i class="fa-solid fa-arrow-down"></i></h4>
+
+			<div class="about">
+				<div class="about-content">
+					<h2>Pay Once - Free Download</h2>
+					<p>
+						Sign up with a new account and make a one time payment with your desired payment service.
+					</p>
+					<span id="cards">
+						<i class="fa-brands fa-cc-paypal"></i>
+						<i class="fa-brands fa-stripe"></i>
+					</span>
+					<a href="./pricing.html" class="cta">Pricing</a>
+				</div>
+
+				<img src="./static/Credit card-amico.png" alt="About image">
 			</div>
+		</section>
 
-			<img src="./static/Credit card-amico.png" alt="About image">
-		</div>
-	</section>
+	</main>
 
 	<footer>
 		<div class="footerlinks">
@@ -62,17 +67,7 @@
 		</form>
 	</footer>
 
-	<script type="text/javascript">
-		const navbtn = document.querySelector('#navbtn')
-		const navbar = document.querySelector('nav')
-		const outside = document.querySelector('section')
-
-		navbtn.addEventListener('click', function(){
-			navbar.style.width = '80%'
-		})
-		outside.addEventListener('click', function(){
-			navbar.style.width = '0'
-		})
-	</script>
+	<!-- <script type="text/javascript"></script> -->
+	<script src="./script.js"></script>
 </body>
 </html>
