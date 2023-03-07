@@ -14,7 +14,7 @@ const myFunction = (n) =>{
 		navbtn.addEventListener('click', openNav)
 		outside.addEventListener('click', closeNav)
 	}else{
-		navbar.style.width = '80%'
+		navbar.style.width = '100%'
 		outside.removeEventListener('click', closeNav)
 	}
 }
